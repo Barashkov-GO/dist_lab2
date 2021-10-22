@@ -13,7 +13,7 @@ public class AirportWritableComparable implements
             this.indicator = indicator;
     }
 
-@Override
+    @Override
     public int compareTo(AirportWritableComparable otherFlight) {
         if (this.airportId > otherFlight.airportId){
             return 1;
@@ -27,7 +27,7 @@ public class AirportWritableComparable implements
         return 0;
     }
 
-@Override
+    @Override
     public void readFields(DataInput in) throws IOException  {
         this.airportId = in.readint();
         this.indicator = in.readBoolean();
