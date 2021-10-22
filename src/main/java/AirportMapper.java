@@ -10,7 +10,8 @@ public class AirportMapper extends Mapper<LongWritable, Text, AirportWritableCom
             InterruptedException {
         String[] stringSlices = value.toString().replaceAll("\"", "").split(",");
         if (!stringSlices[0].equals("Code") && key.get() > 0) {
-            context.write(new AirportWritableComparable(Integer.parseInt(stringSlices[0]), 0), new Text(stringSlices[1].concat(stringSlices[2])));
+            String out = stringSlices[1].concat(stringSlices[2]);
+            context.write(new AirportWritableComparable(Integer.parseInt(stringSlices[0]), 0), new Text(out));
         }
     }
 }
