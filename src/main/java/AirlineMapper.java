@@ -8,7 +8,7 @@ public class AirlineMapper extends Mapper<IntWritable, Text, AirportWritableComp
             InterruptedException {
         String[] words = value.toString().split(",");
         int airportId = Integer.parseInt(words[14]);
-        int arrivalDelay = Integer.parseInt(words[18]);
+        int arrivalDelay = Integer.parseFloat(words[18]);
 
     }
 }
