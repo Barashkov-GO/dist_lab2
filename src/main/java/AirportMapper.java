@@ -8,7 +8,7 @@ public class WordMapper extends Mapper<IntWritable, Text, AirportWritable, Text>
             InterruptedException {
         String[] words = value.toString().ReplaceAll("\"").split(",");
         if (words[0] != "Code") {
-            context.write(new AirportWritable(Integer.parseInt(words[0])), new Text(words[1]));
+            context.write(new AirportWritableCom(Integer.parseInt(words[0])), new Text(words[1]));
         }
     }
 }
