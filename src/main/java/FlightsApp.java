@@ -6,9 +6,10 @@ public class App {
     public static void main(String[] args) throws Exception {
         if (args.length != 3){
             System.err.println("Count of arguments doesn't match to \n\tApp [airlines] [airports] [output]");
+            System.exit(-1);
         }
         Job job = Job.getInstance();
-        job.setJarByClass(JoinJob.class);
+        job.setJarByClass();
         job.setJobName("JoinJob sort");
         MultipleInputs.addInputPath(job, new Path(args[0]), TextInputFormat.class, CallsJoinMapper.class);
         MultipleInputs.addInputPath(job, new Path(args[1]), TextInputFormat.class, SystemsJoinMapper.class);
