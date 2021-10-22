@@ -1,3 +1,7 @@
 public class AirlineWritable implements Writable {
-    public void readFields()
+    private int DestinationAirportId;
+    
+    public void readFields() {
+
+    }
 }
