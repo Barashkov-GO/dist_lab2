@@ -8,4 +8,6 @@ public class AirportWritableComparable implements
             this->indicator = indicator;
     }
 
+    
+
 }
