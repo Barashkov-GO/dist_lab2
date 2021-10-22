@@ -11,8 +11,9 @@ public class AirportReducer extends Reducer<AirportWritableComparable, Text, Tex
         String airportName = iterator.toString();
         float minTime = float.MAX_VALUE;
         float maxTime = 0.0f;
-        
+
         while (iter.hasNext()) {
+            
             Text call = iter.next();
             Text outValue = new Text(call.toString() + "\t" + systemInfo.toString());
             context.write(key.getFirst(), outValue);
