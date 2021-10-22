@@ -51,8 +51,12 @@ public class AirportWritableComparable implements
     }
 
     public int compareId(AirportWritableComparable otherFlight) {
-        return (this.airportId > otherFlight.getAirportId() ? 1 : (this.airportId < otherFlight.getAirportId() ? -1 : 0));
+        if (this.airportId > otherFlight.getAirportId()) {
+            return 1;
+        }
+        if (this.airportId < otherFlight.getAirportId()) {
+            return -1;
+        }
+        return 0;
     }
-
-
 }
