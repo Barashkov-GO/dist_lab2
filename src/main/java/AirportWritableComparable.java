@@ -1,3 +1,6 @@
+import org.apache.hadoop.io.Writable;
+import java.io.IOException;
+
 public class AirportWritableComparable implements
         WritableComparable <AirportWritableComparable> {
     private int airportId;
@@ -7,7 +10,6 @@ public class AirportWritableComparable implements
             this->airportId = airportId;
             this->indicator = indicator;
     }
-
 
 @Override
     public int compareTo(AirportWritableComparable otherFlight) {

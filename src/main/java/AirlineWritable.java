@@ -1,12 +1,15 @@
-import org.apache.hadoop.io.Writable;
+import org.apache.hadoop.io.WritableComparable;
 import java.io.IOException;
 
-public class AirlineWritable implements Writable {
+public class AirlineWritable implements WritableComparable {
     private int destinationAirportId;
     private int arrivalDelay;
 
-    public void readFields(DataInput inId, DataInput inDelay) throws IOException {
-        this->destinationAirportId = inId.readInt();
-        this->arrivalDelay = inDelay.readInt();
+    @Override
+    public void readFields(DataInput in) throws IOException {
+        this->destinationAirportId = in.readInt();
+        this->arrivalDelay = in.readInt();
     }
+
+    
 }
