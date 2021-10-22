@@ -7,7 +7,7 @@ import java.io.DataOutput;
 public class AirportWritableComparable implements
         WritableComparable <AirportWritableComparable> {
     private int airportId;
-    private boolean indicator;
+    private int indicator;
 
 
     AirportWritableComparable(int airportId, boolean indicator){
