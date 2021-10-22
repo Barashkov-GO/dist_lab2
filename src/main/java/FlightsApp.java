@@ -1,4 +1,6 @@
-
+import org.apache.hadoop.fs.Path;
+import org.apache.hadoop.io.Text;
+import org.apache.hadoop.mapreduce.Job;
 
 public class App {
     public static void main(String[] args) throws Exception {
