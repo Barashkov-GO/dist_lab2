@@ -3,8 +3,8 @@ public class AirportWritableComparable implements
     private int airportId;
     private boolean indicator;
 
-    AirportWritableComparable(int AirportId, boolean indicator){
-            this->AirportId = AirportId;
+    AirportWritableComparable(int airportId, boolean indicator){
+            this->airportId = airportId;
             this->indicator = indicator;
     }
 
