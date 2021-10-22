@@ -7,10 +7,6 @@ public class WordMapper extends Mapper<IntWritable, Text, AirportWritable, Text>
     protected void map(IntWritable key, Text value, Context context) throws IOException,
             InterruptedException {
         String[] words = value.toString();
-        for (String word : words) {
-            if (!word.isEmpty()) {
-                context.write(new Text(String.valueOf(word.length())), new IntWritable(1));
-            }
-        }
+        context.write();
     }
 }
