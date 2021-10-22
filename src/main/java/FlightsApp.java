@@ -1,7 +1,7 @@
 
 
 public class App {
-    public static void main(String[] args) throws 
+    public static void main(String[] args) throws Exception
 }
 Job job = Job.getInstance();
         job.setJarByClass(JoinJob.class);
