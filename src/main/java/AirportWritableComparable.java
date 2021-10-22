@@ -32,7 +32,7 @@ public class AirportWritableComparable implements
     @Override
     public void readFields(DataInput in) throws IOException  {
         this.airportId = in.readInt();
-        this.indicator = in.readBoolean();
+        this.indicator = in.readInt();
     }
 
     @Override
