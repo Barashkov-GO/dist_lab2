@@ -10,7 +10,7 @@ public class AirlineMapper extends Mapper<IntWritable, Text, AirportWritableComp
             InterruptedException {
         String[] stringSlices = value.toString().split(",");
         int airportId = Integer.parseInt(stringSlices[14]);
-        int arrivalDelay = Float.parseFloat(stringSlices[18] != "" ? stringSlices[18] : 0);
+        float arrivalDelay = Float.parseFloat(stringSlices[18] != "" ? stringSlices[18] : "0");
         if (arrivalDelay != 0.0f) {
             context.write(new AirportWritableComparable(airportId, 1), new Text(String.valueOf(arrivalDelay)));
         }
