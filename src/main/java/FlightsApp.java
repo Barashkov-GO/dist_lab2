@@ -5,7 +5,7 @@ import org.apache.hadoop.mapreduce.Job;
 public class App {
     public static void main(String[] args) throws Exception {
         if (args.length != 3){
-            System.err.println("Count of arguments doesn't match to ");
+            System.err.println("Count of arguments doesn't match to App ");
         }
         Job job = Job.getInstance();
         job.setJarByClass(JoinJob.class);
