@@ -10,8 +10,8 @@ public class AirportComparator extends WritableComparator {
 
     @Override
     public int compare(WritableComparable firstFlight, WritableComparable secondFlight) {
-        AirportWritableComparable firstFlightWC = new AirportWritableComparable(firstFlight);
-        AirportWritableComparable secondFlightWC = new AirportWritableComparable(secondFlight);
+        AirportWritableComparable firstFlightWC = (AirportWritableComparable) firstFlight;
+        AirportWritableComparable secondFlightWC = (AirportWritableComparable) secondFlight;
         return firstFlightWC.compareId(secondFlightWC);
     }
 }
