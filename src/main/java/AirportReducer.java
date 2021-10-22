@@ -8,8 +8,7 @@ public class AirportReducer extends Reducer<AirportWritableComparable, Text, Tex
     protected void reduce(AirportWritableComparable key, Iterable<Text> values, Context context) throws
             IOException, InterruptedException {
         Iterator<Text> iter = values.iterator();
-        
-        Text systemInfo = new Text(iter.next());
+        String airportName
         while (iter.hasNext()) {
             Text call = iter.next();
             Text outValue = new Text(call.toString() + "\t" + systemInfo.toString());
