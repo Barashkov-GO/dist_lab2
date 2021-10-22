@@ -12,7 +12,7 @@ public class AirportReducer extends Reducer<AirportWritableComparable, Text, Tex
         float minDelayTime = Float.MAX_VALUE;
         float maxDelayTime = 0.0f;
         float sumDelayTime = 0.0f;
-        int countDelayed = 0;
+        float countDelayed = 0.0f;
 
         while (iterator.hasNext()) {
             float newDelay = Float.parseFloat(iterator.next().toString());
@@ -22,7 +22,7 @@ public class AirportReducer extends Reducer<AirportWritableComparable, Text, Tex
                 maxDelayTime = newDelay;
             }
             sumDelayTime += newDelay;
-            countDelayed += 1;
+            countDelayed += 1.0f;
         }
         context.write(new Text("Name of the airport: " + airportName),
                 new Text("\n\tMinimal time of arrival's delay: " + minDelayTime +
