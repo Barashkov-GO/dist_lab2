@@ -1,7 +1,7 @@
 
 
 public class App {
-    public static void main()
+    public static void main(String[] args) 
 }
 Job job = Job.getInstance();
         job.setJarByClass(JoinJob.class);
