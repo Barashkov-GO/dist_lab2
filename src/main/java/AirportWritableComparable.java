@@ -10,7 +10,7 @@ public class AirportWritableComparable implements
     private int indicator;
 
 
-    AirportWritableComparable(int airportId, boolean indicator){
+    AirportWritableComparable(int airportId, int indicator){
             this.airportId = airportId;
             this.indicator = indicator;
     }
