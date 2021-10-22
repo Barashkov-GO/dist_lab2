@@ -35,6 +35,9 @@ public class AirportWritableComparable implements
         this.indicator = in.readBoolean();
     }
 
+    @Override
+    public void write
+
     public int compareId(AirportWritableComparable otherFlight) {
         return (this.airportId > otherFlight.airportId ? 1 : (this.airportId < otherFlight.airportId ? -1 : 0));
     }
