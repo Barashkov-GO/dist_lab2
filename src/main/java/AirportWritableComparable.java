@@ -13,7 +13,7 @@ public class AirportWritableComparable implements
 
 @Override
     public int compareTo(AirportWritableComparable otherFlight) {
-        if (this->airportId > otherFlight.airportId){
+        if (this.airportId > otherFlight.airportId){
             return 1;
         } else if (this->airportId < otherFlight.airportId) {
             return -1;
