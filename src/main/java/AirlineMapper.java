@@ -6,7 +6,7 @@ import java.io.IOException;
 
 public class AirlineMapper extends Mapper<LongWritable, Text, AirportWritableComparable, Text> {
     @Override
-    protected void map(IntWritable key, Text value, Context context) throws IOException,
+    protected void map(LongWritable key, Text value, Context context) throws IOException,
             InterruptedException {
         String[] stringSlices = value.toString().split(",");
         int airportId = Integer.parseInt(stringSlices[14]);
