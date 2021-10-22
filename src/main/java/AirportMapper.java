@@ -8,7 +8,7 @@ public class AirportMapper extends Mapper<IntWritable, Text, AirportWritableComp
     @Override
     protected void map(IntWritable key, Text value, Context context) throws IOException,
             InterruptedException {
-        String[] stringSlices = value.toString().replaceAll("\"").split(",");
+        String[] stringSlices = value.toString().replaceAll("\"", "").split(",");
         if (stringSlices[0] != "Code") {
             context.write(new AirportWritableComparable(Integer.parseInt(stringSlices[0]), 0), new Text(stringSlices[1]));
         }
