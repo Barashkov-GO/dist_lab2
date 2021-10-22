@@ -12,6 +12,5 @@ public class AirlineMapper extends Mapper<IntWritable, Text, AirportWritableComp
         if (arrivalDelay != Float.parseFloat(0)) {
             context.write(new AirportWritableComparable(airportId, 1), new Text(String.valueOf(arrivalDelay)));
         }
-
     }
 }
