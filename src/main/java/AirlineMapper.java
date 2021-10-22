@@ -11,7 +11,7 @@ public class AirlineMapper extends Mapper<LongWritable, Text, AirportWritableCom
         String[] stringSlices = value.toString().split(",");
         if (!stringSlices[14].equals("\"DEST_AIRPORT_ID\"") && key.get() > 0) {
             int airportId = Integer.parseInt(stringSlices[14]);
-            if (!stringSlices[18].equals("")){
+            if (!stringSlices[18].equals("") || Float.parseFloat(stringSlices[18]) == 0.0f){
                 context.write(new AirportWritableComparable(airportId, 1), new Text(stringSlices[18]));
             }
         }
