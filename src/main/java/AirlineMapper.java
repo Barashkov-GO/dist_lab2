@@ -9,6 +9,9 @@ public class AirlineMapper extends Mapper<IntWritable, Text, AirportWritableComp
         String[] words = value.toString().split(",");
         int airportId = Integer.parseInt(words[14]);
         int arrivalDelay = Float.parseFloat(words[18]);
+        if (arrivalDelay != Float.parseFloat(0)) {
+            
+        }
 
     }
 }
