@@ -4,7 +4,7 @@ import org.apache.hadoop.io.Text;
 
 public class AirportPartitioner extends Partitioner<AirportWritableComparable, Text> {
     @Override
-    public abstract int getPartition(AirportWritableComparable flight, Text text, int numPartitions) {
+    public int getPartition(AirportWritableComparable flight, Text text, int numPartitions) {
         return (flight.airportId & Integer.MAX_VALUE) % numPartitions;
     }
 }
