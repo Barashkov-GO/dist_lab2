@@ -8,6 +8,7 @@ public class AirportWritableComparable implements
             this->indicator = indicator;
     }
 
+
 @Override
     public int compareTo(AirportWritableComparable otherFlight) {
         if (this->airportId > otherFlight.airportId){
