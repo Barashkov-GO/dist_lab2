@@ -1,0 +1,1 @@
+public class WordMapper extends Mapper<Text, IntWritable> {
