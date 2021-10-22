@@ -7,8 +7,8 @@ public class AirportWritableComparable implements
     private boolean indicator;
 
     AirportWritableComparable(int airportId, boolean indicator){
-            this->airportId = airportId;
-            this->indicator = indicator;
+            this.airportId = airportId;
+            this.indicator = indicator;
     }
 
 @Override
@@ -27,12 +27,12 @@ public class AirportWritableComparable implements
 
 @Override
     public void readFields(DataInput in) throws IOException  {
-        this->airportId = in.readint();
-        this->indicator = in.readBoolean();
+        this.airportId = in.readint();
+        this.indicator = in.readBoolean();
     }
 
     public int compareId(AirportWritableComparable otherFlight) {
-        return (this->airportId > otherFlight.airportId ? 1 : (this->airportId < otherFlight.airportId ? -1 : 0));
+        return (this.airportId > otherFlight.airportId ? 1 : (this.airportId < otherFlight.airportId ? -1 : 0));
     }
 
 
