@@ -4,7 +4,7 @@ import java.io.IOException;
 
 public class WordMapper extends Mapper<IntWritable, Text, AirportWritable, Text> {
     @Override
-    protected void map(LongWritable key, Text value, Context context) throws IOException,
+    protected void map(IntWritable key, Text value, Context context) throws IOException,
             InterruptedException {
         String[] words = value.toString().replaceAll("[\\n\\r\\t.,!?*\"'\\[\\]{}~$#+=/()]", "")
                 .replaceAll("  ", " ")
