@@ -4,7 +4,7 @@ import org.apache.hadoop.io.Text;
 import java.io.IOException;
 
 
-public class AirportMapper extends Mapper<IntWritable, Text, AirportWritable, Text> {
+public class AirportMapper extends Mapper<IntWritable, Text, AirportWritableComparable, Text> {
     @Override
     protected void map(IntWritable key, Text value, Context context) throws IOException,
             InterruptedException {
