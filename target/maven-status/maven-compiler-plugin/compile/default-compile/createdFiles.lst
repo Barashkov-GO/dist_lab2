@@ -1,4 +1,5 @@
 AirportWritableComparable.class
 AirportReducer.class
 AirportComparator.class
+FlightsApp.class
 AirlineMapper.class
