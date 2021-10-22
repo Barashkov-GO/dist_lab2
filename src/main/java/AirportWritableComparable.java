@@ -9,8 +9,7 @@ public class AirportWritableComparable implements
     }
 
     public int compareTo(AirportWritableComparable otherFlight) {
-        int thisValue = this.value;
-        int thatValue = o.value;
+        
         return (thisValue < thatValue ? -1 : (thisValue==thatValue ? 0 : 1));
     }
 
