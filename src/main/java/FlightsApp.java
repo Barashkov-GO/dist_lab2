@@ -1,5 +1,6 @@
 
 
+public class App 
 Job job = Job.getInstance();
         job.setJarByClass(JoinJob.class);
         job.setJobName("JoinJob sort");
