@@ -1,6 +1,6 @@
-public class AirportReducer extends Reducer<TextPair, Text, Text, Text> {
+public class AirportReducer extends Reducer<AirportWritableComparable, Text, Text, Text> {
     @Override
-    protected void reduce(AirportWritableComparable flight, Iterable<Text> values, Context context) throws
+    protected void reduce(AirportWritableComparable key, Iterable<Text> values, Context context) throws
             IOException, InterruptedException {
         Iterator<Text> iter = values.iterator();
         Text systemInfo = new Text(iter.next());
