@@ -6,9 +6,9 @@ public class AirlineMapper extends Mapper<IntWritable, Text, AirportWritableComp
     @Override
     protected void map(IntWritable key, Text value, Context context) throws IOException,
             InterruptedException {
-        String[] words = value.toString().split(",");
-        int airportId = Integer.parseInt(words[14]);
-        int arrivalDelay = Float.parseFloat(words[18]);
+        String[] stringSlices = value.toString().split(",");
+        int airportId = Integer.parseInt(stringSlices[14]);
+        int arrivalDelay = Float.parseFloat(stringSlices[18]);
         if (arrivalDelay != Float.parseFloat(0)) {
             context.write(new AirportWritableComparable(airportId, 1), new Text(String.valueOf(arrivalDelay)));
         }

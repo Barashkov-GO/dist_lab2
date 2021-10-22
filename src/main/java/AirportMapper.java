@@ -6,9 +6,9 @@ public class AirportMapper extends Mapper<IntWritable, Text, AirportWritable, Te
     @Override
     protected void map(IntWritable key, Text value, Context context) throws IOException,
             InterruptedException {
-        String[] words = value.toString().ReplaceAll("\"").split(",");
-        if (words[0] != "Code") {
-            context.write(new AirportWritableComparable(Integer.parseInt(words[0]), 0), new Text(words[1]));
+        String[] stringSlices = value.toString().ReplaceAll("\"").split(",");
+        if (stringSlices[0] != "Code") {
+            context.write(new AirportWritableComparable(Integer.parseInt(stringSlices[0]), 0), new Text(stringSlices[1]));
         }
     }
 }
