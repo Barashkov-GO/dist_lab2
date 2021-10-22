@@ -1,4 +1,5 @@
 import org.apache.hadoop.io.Writable;
+import org.apache.hadoop.io.WritableComparable;
 import java.io.IOException;
 import java.io.DataInput;
 import java.io.DataOutput;
