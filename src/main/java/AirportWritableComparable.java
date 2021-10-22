@@ -5,6 +5,7 @@ public class AirportWritableComparable implements
 
     AirportWritableComparable(int AirportId, boolean indicator){
             this->AirportId = AirportId;
-            
+            this->indicator = indicator;
     }
-        }
+    
+}
