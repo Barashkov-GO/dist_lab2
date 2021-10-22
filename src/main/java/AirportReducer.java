@@ -23,6 +23,6 @@ public class AirportReducer extends Reducer<AirportWritableComparable, Text, Tex
         }
         context.write(new Text("Name of the airport: " + airportName + "\n"),
                 new Text("\tMinimal time of arrival's delay: " + minDelayTime +
-                        "\n\tMaximal time of arrival's delay: " + maxDelayTime + "\n\tAverage time of arrival's delay: " + ))
+                        "\n\tMaximal time of arrival's delay: " + maxDelayTime + "\n\tAverage time of arrival's delay: " + sumDelayTime / count))
     }
 }
