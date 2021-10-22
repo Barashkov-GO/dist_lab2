@@ -11,5 +11,6 @@ public class AirlineWritable implements WritableComparable {
         this->arrivalDelay = in.readInt();
     }
 
-    
+    @Override
+
 }
