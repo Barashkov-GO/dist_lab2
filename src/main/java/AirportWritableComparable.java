@@ -15,11 +15,11 @@ public class AirportWritableComparable implements
     public int compareTo(AirportWritableComparable otherFlight) {
         if (this.airportId > otherFlight.airportId){
             return 1;
-        } else if (this->airportId < otherFlight.airportId) {
+        } else if (this.airportId < otherFlight.airportId) {
             return -1;
-        } else if (this->indicator && !otherFlight.indicator) {
+        } else if (this.indicator && !otherFlight.indicator) {
             return 1;
-        } else if (!this->indicator && otherFlight.indicator) {
+        } else if (!this.indicator && otherFlight.indicator) {
             return -1;
         }
         return 0;
