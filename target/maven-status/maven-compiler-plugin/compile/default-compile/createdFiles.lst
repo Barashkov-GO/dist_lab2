@@ -1,1 +1,4 @@
+AirportWritableComparable.class
 AirportReducer.class
+AirportComparator.class
+AirlineMapper.class
