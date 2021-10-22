@@ -9,7 +9,7 @@ public class AirportReducer extends Reducer<AirportWritableComparable, Text, Tex
             IOException, InterruptedException {
         Iterator<Text> iterator = values.iterator();
         String airportName = iterator.toString();
-        float minDelayTime = float.MAX_VALUE;
+        float minDelayTime = Float.MAX_VALUE;
         float maxDelayTime = 0.0f;
         float sumDelayTime = 0.0f;
         int countDelayed = 0;
