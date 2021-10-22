@@ -11,15 +11,15 @@ public class AirportReducer extends Reducer<AirportWritableComparable, Text, Tex
         String airportName = iterator.toString();
         float minTime = float.MAX_VALUE;
         float maxTime = 0.0f;
+        float sumTime = 0.0f;
+        int count = 0;
 
         while (iterator.hasNext()) {
             float newDelay = Float.parseFloat(iterator.next());
             (newDelay < minTime) ? minTime = newDelay;
             (newDelay > maxTime) ? maxTime = newDelay;
-            
-            Text call = iterator.next();
-            Text outValue = new Text(call.toString() + "\t" + systemInfo.toString());
-            context.write(key.getFirst(), outValue);
+            sumTime += newDelay;
+            count += 1;
         }
     }
 }
