@@ -13,7 +13,7 @@ public class AirportReducer extends Reducer<AirportWritableComparable, Text, Tex
         float maxTime = 0.0f;
 
         while (iter.hasNext()) {
-            float newDelay = 
+            float newDelay = Float.parseFloat()
             Text call = iter.next();
             Text outValue = new Text(call.toString() + "\t" + systemInfo.toString());
             context.write(key.getFirst(), outValue);
