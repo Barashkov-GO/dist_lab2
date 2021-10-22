@@ -7,5 +7,5 @@ public class AirportWritableComparable implements
             this->AirportId = AirportId;
             this->indicator = indicator;
     }
-    
+
 }
