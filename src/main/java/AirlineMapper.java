@@ -13,8 +13,8 @@ public class AirlineMapper extends Mapper<LongWritable, Text, AirportWritableCom
             int airportId = Integer.parseInt(stringSlices[14]);
             float arrivalDelay = 0.0f;
             if (!stringSlices[18].equals("")){
-                arrivalDelay = Float.parseFloat(stringSlices[18]);
-                context.write(new AirportWritableComparable(airportId, 1), new Text(String.valueOf(arrivalDelay)));
+//                arrivalDelay = Float.parseFloat(stringSlices[18]);
+                context.write(new AirportWritableComparable(airportId, 1), new Text(stringSlices[18]));
             }
         }
     }
