@@ -21,5 +21,6 @@ public class AirportReducer extends Reducer<AirportWritableComparable, Text, Tex
             sumTime += newDelay;
             count += 1;
         }
+        context.write()
     }
 }
