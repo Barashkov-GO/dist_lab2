@@ -1,4 +1,5 @@
-import org.apache.hadoop.mapreduce.Reducer
+import org.apache.hadoop.mapreduce.Reducer;
+
 import java.io.IOException;
 
 public class AirportReducer extends Reducer<AirportWritableComparable, Text, Text, Text> {
