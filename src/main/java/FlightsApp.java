@@ -1,9 +1,8 @@
 
 
 public class App {
-    public static void main(String[] args) throws Exception
-}
-Job job = Job.getInstance();
+    public static void main(String[] args) throws Exception {
+        Job job = Job.getInstance();
         job.setJarByClass(JoinJob.class);
         job.setJobName("JoinJob sort");
         MultipleInputs.addInputPath(job, new Path(args[0]), TextInputFormat.class, CallsJoinMapper.class);
@@ -17,3 +16,5 @@ Job job = Job.getInstance();
         job.setOutputValueClass(Text.class);
         job.setNumReduceTasks(2);
         System.exit(job.waitForCompletion(true) ? 0 : 1);
+    }
+}
