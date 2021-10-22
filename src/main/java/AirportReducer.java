@@ -9,6 +9,7 @@ public class AirportReducer extends Reducer<AirportWritableComparable, Text, Tex
             IOException, InterruptedException {
         Iterator<Text> iter = values.iterator();
         String airportName = iterator.toString();
+        float minTime = float.MAX_VALUE;
         
         while (iter.hasNext()) {
             Text call = iter.next();
