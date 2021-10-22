@@ -10,7 +10,7 @@ public class App {
         }
         Job job = Job.getInstance();
         job.setJarByClass(App.class);
-        job.setJobName("JoinJob sort");
+        job.setJobName("Airports reduce side join");
         MultipleInputs.addInputPath(job, new Path(args[0]), TextInputFormat.class, CallsJoinMapper.class);
         MultipleInputs.addInputPath(job, new Path(args[1]), TextInputFormat.class, SystemsJoinMapper.class);
         FileOutputFormat.setOutputPath(job, new Path(args[2]));
