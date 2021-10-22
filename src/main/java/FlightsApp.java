@@ -4,6 +4,9 @@ import org.apache.hadoop.mapreduce.Job;
 
 public class App {
     public static void main(String[] args) throws Exception {
+        if (args.length != 3){
+            
+        }
         Job job = Job.getInstance();
         job.setJarByClass(JoinJob.class);
         job.setJobName("JoinJob sort");
