@@ -1,10 +1,10 @@
 import org.apache.hadoop.mapreduce.Mapper;
-import org.apache.hadoop.io.IntWritable;
+import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
 import java.io.IOException;
 
 
-public class AirportMapper extends Mapper<IntWritable, Text, AirportWritableComparable, Text> {
+public class AirportMapper extends Mapper<LongWritable, Text, AirportWritableComparable, Text> {
     @Override
     protected void map(IntWritable key, Text value, Context context) throws IOException,
             InterruptedException {
