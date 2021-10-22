@@ -37,7 +37,7 @@ public class AirportWritableComparable implements
 
     @Override
     public void write(DataOutput dataOutput) throws IOException  {
-        
+        dataOutput.writeInt
     }
 
     public int compareId(AirportWritableComparable otherFlight) {
