@@ -1,3 +1,6 @@
+import org.apache.hadoop.io.Writable;
+import java.io.IOException;
+
 public class AirlineWritable implements Writable {
     private int destinationAirportId;
     private int arrivalDelay;
