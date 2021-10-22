@@ -23,4 +23,11 @@ public class AirportWritableComparable implements
         return 0;
     }
 
+@Override
+    public void readFields(DataInput in) throws IOException  {
+        this->airportId = in.readint();
+        this->indicator = in.readBoolean();
+    }
+
+
 }
