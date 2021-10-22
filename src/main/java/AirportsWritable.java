@@ -1,1 +1,3 @@
-public class AirportWritable implements Writable
+public class AirportWritable implements Writable {
+
+}
