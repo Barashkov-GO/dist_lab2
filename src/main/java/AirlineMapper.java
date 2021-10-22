@@ -9,6 +9,7 @@ public class AirlineMapper extends Mapper<LongWritable, Text, AirportWritableCom
     protected void map(LongWritable key, Text value, Context context) throws IOException,
             InterruptedException {
         String[] stringSlices = value.toString().split(",");
+        if (!stringSlices[14].equals(""))
         int airportId = Integer.parseInt(stringSlices[14]);
         float arrivalDelay = Float.parseFloat(stringSlices[18] != "" ? stringSlices[18] : "0");
         if (arrivalDelay != 0.0f) {
