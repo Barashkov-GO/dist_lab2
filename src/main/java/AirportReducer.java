@@ -9,18 +9,19 @@ public class AirportReducer extends Reducer<AirportWritableComparable, Text, Tex
             IOException, InterruptedException {
         Iterator<Text> iterator = values.iterator();
         String airportName = iterator.toString();
-        float minTime = float.MAX_VALUE;
-        float maxTime = 0.0f;
-        float sumTime = 0.0f;
+        float minDelayTime = float.MAX_VALUE;
+        float maxDelayTime = 0.0f;
+        float sumDelayTime = 0.0f;
         int count = 0;
 
         while (iterator.hasNext()) {
             float newDelay = Float.parseFloat(iterator.next());
-            (newDelay < minTime) ? minTime = newDelay;
-            (newDelay > maxTime) ? maxTime = newDelay;
-            sumTime += newDelay;
+            (newDelay < minDelayTime) ? minDelayTime = newDelay;
+            (newDelay > maxDelayTime) ? maxDelayTime = newDelay;
+            sumDelayTime += newDelay;
             count += 1;
         }
-        context.write(new Text("Name of the airport: " + airportName + "\n"), new Text("\tMinimal time of arrival's delay: " + ))
+        context.write(new Text("Name of the airport: " + airportName + "\n"),
+                new Text("\tMinimal time of arrival's delay: " + minDelayTime + "\n"))
     }
 }
