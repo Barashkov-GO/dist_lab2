@@ -9,6 +9,7 @@ public class AirportWritableComparable implements
     private int airportId;
     private boolean indicator;
 
+    
     AirportWritableComparable(int airportId, boolean indicator){
             this.airportId = airportId;
             this.indicator = indicator;
