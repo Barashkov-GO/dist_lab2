@@ -5,6 +5,7 @@ import org.apache.hadoop.io.Text;
 import java.util.Iterator;
 import java.io.IOException;
 
+
 public class AirportReducer extends Reducer<AirportWritableComparable, Text, Text, Text> {
     @Override
     protected void reduce(AirportWritableComparable key, Iterable<Text> values, Context context) throws
