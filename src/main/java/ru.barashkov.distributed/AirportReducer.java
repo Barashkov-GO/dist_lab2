@@ -7,6 +7,11 @@ import java.io.IOException;
 
 
 public class AirportReducer extends Reducer<AirportWritableComparable, Text, Text, Text> {
+
+    private boolean checkEmpty(Iterator<Text> it){
+        return !it.hasNext();
+    }
+
     @Override
     protected void reduce(AirportWritableComparable key, Iterable<Text> values, Context context) throws
             IOException, InterruptedException {
@@ -16,10 +21,11 @@ public class AirportReducer extends Reducer<AirportWritableComparable, Text, Tex
         float maxDelayTime = 0.0f;
         float sumDelayTime = 0.0f;
         float countDelayed = 0.0f;
-        if (!iterator.hasNext()) {
+
+        if (checkEmpty(iterator)) {
             return;
         }
-        while (iterator.hasNext()) {
+        while (!checkEmpty(iterator)) {
             float newDelay = Float.parseFloat(iterator.next().toString());
             if (newDelay < minDelayTime){
                 minDelayTime = newDelay;
