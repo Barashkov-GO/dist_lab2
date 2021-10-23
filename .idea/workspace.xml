@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b471e094-60d4-4a34-95b0-c471c56a9cdf" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/java/ru.barashkov.distributed/AirlineMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru.barashkov.distributed/AirlineMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru.barashkov.distributed/AirportMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru.barashkov.distributed/AirportMapper.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +38,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/script.sh" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
     <property name="settings.editor.selected.configurable" value="preferences.general" />
   </component>
   <component name="RecentsManager">

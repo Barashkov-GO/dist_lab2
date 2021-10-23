@@ -10,7 +10,7 @@ public class AirlineMapper extends Mapper<LongWritable, Text, AirportWritableCom
     private static final int AIRPORT_ID_POS = 14;
     private static final int FLIGHT_DELAY_POS = 18;
     private static final String SEPARATOR = ",";
-    private static final String CHECK_WRONG = "\"DEST_AIRPORT_ID\"";
+    private static final String HEADER = "\"DEST_AIRPORT_ID\"";
     private static final int INDICATOR = 1;
 
     @Override
@@ -18,10 +18,10 @@ public class AirlineMapper extends Mapper<LongWritable, Text, AirportWritableCom
             InterruptedException {
         String[] stringSlices = value.toString().split(SEPARATOR);
 
-        if (!stringSlices[AIRPORT_ID_POS].equals(CHECK_WRONG)) {
+        if (!stringSlices[AIRPORT_ID_POS].equals(HEADER)) {
             int airportId = Integer.parseInt(stringSlices[AIRPORT_ID_POS]);
             String flightDelayStr = stringSlices[FLIGHT_DELAY_POS];
-            if (!flightDelayStr.equals("") && Float.parseFloat(flightDelayStr) != 0.0f){
+            if (!flightDelayStr.isEmpty() && Float.parseFloat(flightDelayStr) != 0.0f){
                 context.write(new AirportWritableComparable(airportId, INDICATOR), new Text(flightDelayStr));
             }
         }
