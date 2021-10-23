@@ -1,4 +1,4 @@
-package ru.barashkov.distributed.airport;
+package ru.barashkov.distributed;
 import org.apache.hadoop.mapreduce.Reducer;
 import org.apache.hadoop.io.Text;
 import java.util.Iterator;

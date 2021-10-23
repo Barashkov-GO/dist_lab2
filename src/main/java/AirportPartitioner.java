@@ -1,4 +1,4 @@
-package ru.barashkov.distributed.airport;
+package ru.barashkov.distributed;
 import org.apache.hadoop.mapreduce.Partitioner;
 import java.io.IOException;
 import org.apache.hadoop.io.Text;
