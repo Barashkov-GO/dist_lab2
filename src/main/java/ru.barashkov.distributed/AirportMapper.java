@@ -10,16 +10,17 @@ public class AirportMapper extends Mapper<LongWritable, Text, AirportWritableCom
     private static final String SEPARATOR = ",";
     private static final String TO_DELETE = "\"";
     private static final String CHECK = "Code";
-    private static final int SPLIT_TO = 2;
+    private static final int SPLIT_MAX = 2;
     private static final int AIRPORT_ID_ID = 0;
-    private static final int AIRPORT_NAME_ID = 0;
+    private static final int AIRPORT_NAME_ID = 1;
+    private static final int INDICATOR = 0;
 
     @Override
     protected void map(LongWritable key, Text value, Context context) throws IOException,
             InterruptedException {
-        String[] stringSlices = value.toString().replaceAll(TO_DELETE, "").split(SEPARATOR, SPLIT_TO);
+        String[] stringSlices = value.toString().replaceAll(TO_DELETE, "").split(SEPARATOR, SPLIT_MAX);
         if (!stringSlices[0].equals(CHECK)) {
-            context.write(new AirportWritableComparable(Integer.parseInt(stringSlices[AIRPORT_ID_ID]), 0), new Text(stringSlices[AIRPORT_NAME_ID]));
+            context.write(new AirportWritableComparable(Integer.parseInt(stringSlices[AIRPORT_ID_ID]), INDICATOR), new Text(stringSlices[AIRPORT_NAME_ID]));
         }
     }
 }
