@@ -1,7 +1,4 @@
-ru/barashkov/distributed/AirlineMapper.class
-ru/barashkov/distributed/AirportComparator.class
-ru/barashkov/distributed/AirportReducer.class
-ru/barashkov/distributed/AirportPartitioner.class
 ru/barashkov/distributed/AirportWritableComparable.class
 ru/barashkov/distributed/FlightsApp.class
-ru/barashkov/distributed/AirportMapper.class
+ru/barashkov/distributed/AirportReducer.class
+ru/barashkov/distributed/AirportPartitioner.class
