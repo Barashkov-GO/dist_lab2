@@ -12,17 +12,17 @@ public class AirportMapper extends Mapper<LongWritable, Text, AirportWritableCom
     private static final String EMPTY_STRING = "";
     private static final String HEADER = "Code";
     private static final int SPLIT_MAX = 2;
-    private static final int AIRPORT_ID_POS = 0;
-    private static final int AIRPORT_NAME_ID = 1;
+    private static final int AIRPORT_ID_POSITION = 0;
+    private static final int AIRPORT_NAME_POSITION = 1;
     private static final int INDICATOR = 0;
 
     @Override
     protected void map(LongWritable key, Text value, Context context) throws IOException,
             InterruptedException {
         String[] stringSlices = removeQuotes(value.toString()).split(SEPARATOR, SPLIT_MAX);
-        if (!stringSlices[AIRPORT_ID_POS].equals(HEADER)) {
-            context.write(new AirportWritableComparable(Integer.parseInt(stringSlices[AIRPORT_ID_POS]), INDICATOR),
-                    new Text(stringSlices[AIRPORT_NAME_ID]));
+        if (!stringSlices[AIRPORT_ID_POSITION].equals(HEADER)) {
+            context.write(new AirportWritableComparable(Integer.parseInt(stringSlices[AIRPORT_ID_POSITION]), INDICATOR),
+                    new Text(stringSlices[AIRPORT_NAME_POSITION]));
         }
     }
 
