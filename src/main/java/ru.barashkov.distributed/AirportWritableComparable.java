@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.DataInput;
 import java.io.DataOutput;
 
+
 public class AirportWritableComparable implements
         WritableComparable <AirportWritableComparable> {
     private int airportId;
