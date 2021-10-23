@@ -5,10 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b471e094-60d4-4a34-95b0-c471c56a9cdf" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/AirlineMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AirlineMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/AirportComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AirportComparator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/AirportMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AirportMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/AirportPartitioner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AirportPartitioner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/AirportReducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AirportReducer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/AirportWritableComparable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AirportWritableComparable.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

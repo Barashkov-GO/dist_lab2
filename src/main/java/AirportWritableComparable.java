@@ -1,3 +1,4 @@
+package ru.barashkov.distributed.airport;
 import org.apache.hadoop.io.Writable;
 import org.apache.hadoop.io.WritableComparable;
 import java.io.IOException;

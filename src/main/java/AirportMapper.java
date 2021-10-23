@@ -1,3 +1,4 @@
+package ru.barashkov.distributed.airport;
 import org.apache.hadoop.mapreduce.Mapper;
 import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
