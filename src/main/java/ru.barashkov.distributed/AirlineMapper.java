@@ -18,7 +18,7 @@ public class AirlineMapper extends Mapper<LongWritable, Text, AirportWritableCom
             InterruptedException {
         String[] stringSlices = value.toString().split(SEPARATOR);
 
-        if (!stringSlices[AIRPORT_ID_ID].equals(CHECK) && key.get() > 0) {
+        if (!stringSlices[AIRPORT_ID_ID].equals(CHECK)) {
             int airportId = Integer.parseInt(stringSlices[AIRPORT_ID_ID]);
             String flightDelayStr = stringSlices[FLIGHT_DELAY_ID];
             if (!flightDelayStr.equals("") && Float.parseFloat(flightDelayStr) != 0.0f){
