@@ -18,11 +18,11 @@ public class AirportWritableComparable implements WritableComparable <AirportWri
         this.indicator = indicator;
     }
 
-    public int getAirportId(){
+    protected int getAirportId(){
         return this.airportId;
     }
 
-    public int getIndicator() {
+    protected int getIndicator() {
         return this.indicator;
     }
 
