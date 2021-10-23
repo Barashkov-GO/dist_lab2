@@ -5,12 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b471e094-60d4-4a34-95b0-c471c56a9cdf" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/AirlineMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AirlineMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/AirportComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AirportComparator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/AirportMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AirportMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/AirportPartitioner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AirportPartitioner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/AirportReducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AirportReducer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/AirportWritableComparable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AirportWritableComparable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru.barashkov.distributed/AirlineMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru.barashkov.distributed/AirlineMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru.barashkov.distributed/AirportComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru.barashkov.distributed/AirportComparator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru.barashkov.distributed/AirportMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru.barashkov.distributed/AirportMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru.barashkov.distributed/AirportPartitioner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru.barashkov.distributed/AirportPartitioner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru.barashkov.distributed/AirportReducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru.barashkov.distributed/AirportReducer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru.barashkov.distributed/FlightsApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru.barashkov.distributed/FlightsApp.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +48,9 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/ru.barashkov.distributed" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
