@@ -25,6 +25,7 @@ public class AirportReducer extends Reducer<AirportWritableComparable, Text, Tex
         if (checkEmpty(iterator)) {
             return;
         }
+
         while (!checkEmpty(iterator)) {
             float newDelay = Float.parseFloat(iterator.next().toString());
             if (newDelay < minDelayTime){
