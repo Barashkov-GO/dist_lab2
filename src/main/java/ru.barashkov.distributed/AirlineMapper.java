@@ -12,11 +12,12 @@ public class AirlineMapper extends Mapper<LongWritable, Text, AirportWritableCom
     private static final String SEPARATOR = ",";
     private static final String CHECK = "\"DEST_AIRPORT_ID\"";
     private static final int INDICATOR = 1;
+
     @Override
     protected void map(LongWritable key, Text value, Context context) throws IOException,
             InterruptedException {
         String[] stringSlices = value.toString().split(SEPARATOR);
-        
+
         if (!stringSlices[AIRPORT_ID_ID].equals(CHECK) && key.get() > 0) {
             int airportId = Integer.parseInt(stringSlices[AIRPORT_ID_ID]);
             String flightDelayStr = stringSlices[FLIGHT_DELAY_ID];
