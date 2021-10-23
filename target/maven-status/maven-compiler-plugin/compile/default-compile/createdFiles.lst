@@ -1,0 +1,3 @@
+ru/barashkov/distributed/airport/AirportComparator.class
+ru/barashkov/distributed/airport/AirportWritableComparable.class
+ru/barashkov/distributed/airport/AirportReducer.class
